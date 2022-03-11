@@ -18,4 +18,14 @@ package body Server_Logger is
       Ada.Text_IO.Put_Line("*** ERROR: " & Message);
    end Write_Error;
 
+   procedure Write_Information(Message : in String) is
+   begin
+      Ada.Text_IO.Put_Line("***ERROR: " & Message);
+   end Write_Information;
+
+   procedure Write_Warning(Message : in String) is
+   begin
+      Ada.Text_IO.Put_Line("***ERROR: " & Message);
+   end Write_Warning;
+
 end Server_Logger;

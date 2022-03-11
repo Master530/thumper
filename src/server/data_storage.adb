@@ -9,13 +9,13 @@
 ---------------------------------------------------------------------------
 
 -- TODO: Remove dependency on Ada.Text_IO. Use a real logger.
-with Ada.Text_IO;
+with Server_Logger;
 with Postgresql;
 
-use Ada.Text_IO;
+use Server_Logger;
 use Postgresql;
 
-
+                                    --step 5
 package body Data_Storage is
 
    procedure Initialize is
