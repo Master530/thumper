@@ -15,21 +15,21 @@ with Postgresql;
 use Server_Logger;
 use Postgresql;
 
-                                    --step 5
+
 package body Data_Storage is
 
    procedure Initialize is
    begin
       -- TODO: Database connectivity information should come from a configuration file.
       Postgresql.Connect("localhost", 5432, "ThumperServer", "thumper", "rabbitsfoot");
-      Put_Line("Connected to the Database.");
+      Write_Information("Connected to the Database.");
    end Initialize;
 
 
    procedure Shutdown is
    begin
       Postgresql.Disconnect;
-      Put_Line("Disconnected From the Database");
+      Write_Information("Disconnected From the Database");
    end Shutdown;
 
 
